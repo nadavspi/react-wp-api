@@ -46,7 +46,7 @@ export default React.createClass({
         {this.state.isLoaded ? (
           <article>
             <h2>{post.title}</h2>
-            {post.content}
+            <div dangerouslySetInnerHTML={ {__html: post.content} } />
           </article>
          ) : (
            <h2>Loading</h2>
